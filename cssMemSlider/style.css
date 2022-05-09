@@ -59,13 +59,31 @@ body {
 
 .slider__controls {
     display: flex;
-    gap: 10px;
 }
 
 .slider__controls label {
+    box-sizing: unset;
     cursor: pointer;
     width: 1rem;
     height: 1rem;
+    padding: 1rem;
+}
+
+.slider__label {
     border: 2px solid #000;
+    height: 100%;
     border-radius: 50%;
+}
+
+#slide1:checked ~ .slider__slides .slider__item {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slider__slides .slider__item {
+    transform: translateX(-100%);
+}
+
+#slide1:checked ~ .slider__nav .slider__label_1,
+#slide2:checked ~ .slider__nav .slider__label_2 {
+    background-color: black;
 }
