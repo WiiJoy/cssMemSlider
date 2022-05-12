@@ -21,18 +21,23 @@ body {
     display: none;
 }
 
-.slider__slides {
+.slider__wrapper {
     width: 100%;
     /* max-width: 800px; */
     /* padding: 0 20px; */
-    display: flex;
+    /* display: flex; */
     margin: 0 auto;
     overflow-x: hidden;
 }
 
-.slider__item {
+.slider__slides {
+    width: 100%;
+    display: flex;
     transition: .3s;
-    transform: translateX(0);
+}
+
+.slider__item {
+    position: relative;
 }
 
 .slider__item_1 {
@@ -69,21 +74,50 @@ body {
     padding: 1rem;
 }
 
-.slider__label {
+.slider__label_1,
+.slider__label_2,
+.slider__label_3,
+.slider__label_4 {
+    display: block;
     border: 2px solid #000;
     height: 100%;
+    width: 100%;
     border-radius: 50%;
+    background-color: white;
 }
 
-#slide1:checked ~ .slider__slides .slider__item {
+#slide1:checked~.slider__nav .slider__controls [for="slide1"] .slider__label,
+#slide2:checked~.slider__nav .slider__controls [for="slide2"] .slider__label,
+#slide3:checked~.slider__nav .slider__controls [for="slide3"] .slider__label,
+#slide4:checked~.slider__nav .slider__controls [for="slide4"] .slider__label {
+    background-color: black;
+}
+
+/* #slide1~.slider__slides > .slider__item {
+    transform: translateX(0);
+} */
+
+#slide1:checked~.slider__wrapper .slider__slides {
     transform: translateX(0);
 }
 
-#slide2:checked ~ .slider__slides .slider__item {
+#slide2:checked~.slider__wrapper .slider__slides {
     transform: translateX(-100%);
 }
 
-#slide1:checked ~ .slider__nav .slider__label_1,
-#slide2:checked ~ .slider__nav .slider__label_2 {
-    background-color: black;
+#slide3:checked~.slider__wrapper .slider__slides {
+    transform: translateX(-200%);
 }
+
+#slide4:checked~.slider__wrapper .slider__slides {
+    transform: translateX(-300%);
+}
+
+/* #slide1 ~ .slider__nav .slider__label .slider__label_1,
+#slide2 ~ .slider__nav .slider__label .slider__label_2,
+#slide3 ~ .slider__nav .slider__label .slider__label_3,
+#slide4 ~ .slider__nav .slider__label .slider__label_4 {
+    background: none;
+} */
+
+

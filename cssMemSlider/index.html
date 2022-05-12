@@ -9,15 +9,17 @@
 </head>
 <body>
     <div class="slider">
-        <input type="radio" class="slider__input" id="slide1" checked>
-        <input type="radio" class="slider__input" id="slide2">
-        <input type="radio" class="slider__input" id="slide3">
-        <input type="radio" class="slider__input" id="slide4">
-        <div class="slider__slides">
-            <img src="./slides/slide1.jpg" alt="" class="slider__item slider__item_1">
-            <img src="./slides/slide2.jpg" alt="" class="slider__item slider__item_2">
-            <img src="./slides/slide3.jpg" alt="" class="slider__item slider__item_3">
-            <img src="./slides/slide4.jpg" alt="" class="slider__item slider__item_4">
+        <input type="radio" name="slider-radio" class="slider__input" id="slide1" checked>
+        <input type="radio" name="slider-radio" class="slider__input" id="slide2">
+        <input type="radio" name="slider-radio" class="slider__input" id="slide3">
+        <input type="radio" name="slider-radio" class="slider__input" id="slide4">
+        <div class="slider__wrapper">
+            <div class="slider__slides">
+                <img src="./slides/slide1.jpg" alt="" class="slider__item slider__item_1">
+                <img src="./slides/slide2.jpg" alt="" class="slider__item slider__item_2">
+                <img src="./slides/slide3.jpg" alt="" class="slider__item slider__item_3">
+                <img src="./slides/slide4.jpg" alt="" class="slider__item slider__item_4">
+            </div>
             <!-- <div class="slider__item slider__item_1"></div>
             <div class="slider__item slider__item_2"></div>
             <div class="slider__item slider__item_3"></div>
@@ -33,10 +35,10 @@
             </div>
 
             <div class="slider__controls">
-                <label for="slide1"><div class="slider__label slider__label_1"></div></label>
-                <label for="slide2"><div class="slider__label slider__label_2"></div></label>
-                <label for="slide3"><div class="slider__label slider__label_3"></div></label>
-                <label for="slide4"><div class="slider__label slider__label_4"></div></label>
+                <label for="slide1"><span class="slider__label slider__label_1"></span></label>
+                <label for="slide2"><span class="slider__label slider__label_2"></span></label>
+                <label for="slide3"><span class="slider__label slider__label_3"></span></label>
+                <label for="slide4"><span class="slider__label slider__label_4"></span></label>
             </div>
         </div>
     </div>
