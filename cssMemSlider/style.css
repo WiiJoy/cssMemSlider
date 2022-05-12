@@ -36,7 +36,6 @@ body {
 }
 
 .slider__item {
-    position: relative;
     width: 100%;
 }
 
@@ -67,7 +66,7 @@ body {
 
 .slider__names {
     overflow-x: hidden;
-    width: 10rem;
+    flex: 1;
 }
 
 .slider__names__wrapper {
@@ -77,7 +76,6 @@ body {
 }
 
 .slider__name {
-    position: relative;
     min-width: 100%;
     width: 100%;
 }
@@ -86,7 +84,6 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 1;
 }
 
 .slider__controls label {
@@ -115,10 +112,6 @@ body {
 #slide4:checked~.slider__nav .slider__controls [for="slide4"] .slider__label {
     background-color: black;
 }
-
-/* #slide1~.slider__slides > .slider__item {
-    transform: translateX(0);
-} */
 
 #slide1:checked~.slider__wrapper .slider__slides,
 #slide1:checked~.slider__nav .slider__names__wrapper {
@@ -150,5 +143,3 @@ body {
         width: 100%;
     }
 }
-
-
