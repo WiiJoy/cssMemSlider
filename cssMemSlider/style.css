@@ -12,9 +12,9 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* width: 840px; */
+    gap: 1.3rem;
     width: 100vw;
-    padding: 20px;
+    padding: 1.3rem;
     margin: 0 auto;
 }
 
@@ -25,9 +25,6 @@ body {
 .slider__wrapper {
     width: 100%;
     max-width: 50rem;
-    /* max-width: 800px; */
-    /* padding: 0 20px; */
-    /* display: flex; */
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -95,9 +92,9 @@ body {
 .slider__controls label {
     box-sizing: unset;
     cursor: pointer;
-    width: 1rem;
-    height: 1rem;
-    padding: 1rem;
+    width: .7rem;
+    height: .7rem;
+    padding: .7rem;
 }
 
 .slider__label_1,
@@ -143,11 +140,15 @@ body {
     transform: translateX(-300%);
 }
 
-/* #slide1 ~ .slider__nav .slider__label .slider__label_1,
-#slide2 ~ .slider__nav .slider__label .slider__label_2,
-#slide3 ~ .slider__nav .slider__label .slider__label_3,
-#slide4 ~ .slider__nav .slider__label .slider__label_4 {
-    background: none;
-} */
+@media (max-width: 480px) {
+    .slider__nav {
+        flex-direction: column-reverse;
+        gap: 1.3rem;
+    }
+
+    .slider__names {
+        width: 100%;
+    }
+}
 
 
