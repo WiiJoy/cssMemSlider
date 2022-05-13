@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 body {
     height: 100vh;
     font-family: 'Macondo', cursive;
