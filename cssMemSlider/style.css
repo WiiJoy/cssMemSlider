@@ -154,11 +154,6 @@ body {
     transform: translateX(-300%);
 }
 
-/* label:hover .slider__label {
-    background-color: #da6767;
-    border-color: #da6767;
-} */
-
 @media (max-width: 480px) {
     .slider__nav {
         flex-direction: column-reverse;
