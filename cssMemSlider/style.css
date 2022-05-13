@@ -37,6 +37,7 @@ body {
     max-width: 50rem;
     margin: 0 auto;
     overflow-x: hidden;
+    border: 0.2rem solid #8b4530;
     border-radius: 0.6rem;
 }
 
@@ -108,7 +109,7 @@ body {
 
 .slider__label {
     display: block;
-    border: 2px solid #100d13;
+    border: 0.15rem solid #100d13;
     height: 100%;
     width: 100%;
     border-radius: 50%;
