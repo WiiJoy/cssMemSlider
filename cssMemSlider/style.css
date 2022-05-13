@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,9 @@
 
 body {
     height: 100vh;
+    font-family: 'Macondo', cursive;
+    color: #100d13;
+    background-color: #f1dedc;
 }
 
 .slider {
@@ -27,6 +32,7 @@ body {
     max-width: 50rem;
     margin: 0 auto;
     overflow-x: hidden;
+    border-radius: 0.6rem;
 }
 
 .slider__slides {
@@ -78,6 +84,7 @@ body {
 .slider__name {
     min-width: 100%;
     width: 100%;
+    font-size: 1.25rem;
 }
 
 .slider__controls {
@@ -94,23 +101,37 @@ body {
     padding: .7rem;
 }
 
-.slider__label_1,
-.slider__label_2,
-.slider__label_3,
-.slider__label_4 {
+.slider__label {
     display: block;
-    border: 2px solid #000;
+    border: 2px solid #100d13;
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    background-color: white;
+    background-color: #100d13;
+    transition: .3s;
 }
 
 #slide1:checked~.slider__nav .slider__controls [for="slide1"] .slider__label,
 #slide2:checked~.slider__nav .slider__controls [for="slide2"] .slider__label,
 #slide3:checked~.slider__nav .slider__controls [for="slide3"] .slider__label,
 #slide4:checked~.slider__nav .slider__controls [for="slide4"] .slider__label {
-    background-color: black;
+    background-color: #f1dedc;
+}
+
+#slide1:not(#slide1:checked)~.slider__nav .slider__controls [for="slide1"]:hover .slider__label,
+#slide2:not(#slide2:checked)~.slider__nav .slider__controls [for="slide2"]:hover .slider__label,
+#slide3:not(#slide3:checked)~.slider__nav .slider__controls [for="slide3"]:hover .slider__label,
+#slide4:not(#slide4:checked)~.slider__nav .slider__controls [for="slide4"]:hover .slider__label {
+    background-color: #da6767;
+    border-color: #da6767;
+}
+
+#slide1:not(#slide1:checked)~.slider__nav .slider__controls [for="slide1"]:active .slider__label,
+#slide2:not(#slide2:checked)~.slider__nav .slider__controls [for="slide2"]:active .slider__label,
+#slide3:not(#slide3:checked)~.slider__nav .slider__controls [for="slide3"]:active .slider__label,
+#slide4:not(#slide4:checked)~.slider__nav .slider__controls [for="slide4"]:active .slider__label {
+    background-color: #8b4530;
+    border-color: #8b4530;
 }
 
 #slide1:checked~.slider__wrapper .slider__slides,
@@ -132,6 +153,11 @@ body {
 #slide4:checked~.slider__nav .slider__names__wrapper {
     transform: translateX(-300%);
 }
+
+/* label:hover .slider__label {
+    background-color: #da6767;
+    border-color: #da6767;
+} */
 
 @media (max-width: 480px) {
     .slider__nav {
