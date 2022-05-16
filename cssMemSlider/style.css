@@ -22,6 +22,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1.3rem;
     width: 100vw;
     padding: 1.3rem;
@@ -44,7 +46,7 @@ body {
 .slider__slides {
     width: 100%;
     display: flex;
-    transition: .3s;
+    transition: 1s ease-in-out;
 }
 
 .slider__item {
@@ -84,7 +86,7 @@ body {
 .slider__names__wrapper {
     display: flex;
     width: 100%;
-    transition: .3s;
+    transition: 1s ease-in-out;
 }
 
 .slider__name {
@@ -114,7 +116,7 @@ body {
     width: 100%;
     border-radius: 50%;
     background-color: #100d13;
-    transition: .3s;
+    transition: .5s;
 }
 
 #slide1:checked~.slider__nav .slider__controls [for="slide1"] .slider__label,
