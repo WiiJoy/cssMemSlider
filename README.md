@@ -1,1 +1,2 @@
 # cssMemSlider
+check build
